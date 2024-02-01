@@ -15,8 +15,8 @@ my_dag = DAG(
 )
 
 
-def print_text(text):
-    print(text)
+def update_tab_recap_view():
+    
 
 
 texts = [

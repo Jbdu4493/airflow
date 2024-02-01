@@ -22,7 +22,7 @@ def init_process():
     print('Process de mise à jour de la vue "table_recap_view"')
 
 def check_connection_database():
-    database_url = Variable.get(key="database_uri",deserialize_json=True)
+    database_url = Variable.get(key="database_uri")
     engine = create_engine(database_url)
     sql_title = "SELECT * FROM table_recap_view;"
 
@@ -35,7 +35,7 @@ def check_connection_database():
     engine.dispose()
 
 def update_view():
-    database_url = Variable.get(key="database_uri",deserialize_json=True)
+    database_url = Variable.get(key="database_uri")
     engine = create_engine(database_url)
     sql_title = "REFRESH MATERIALIZED VIEW table_recap_view;"
 
